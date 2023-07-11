@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - uses: docker/build-push-action@v3
         with:
-          file: Dockerfile.small
+          file: dockerfile.small
           platforms: linux/amd64, linux/arm64/v8
           push: true
           tags: bytebase/sample-database:mysql-employee-small
